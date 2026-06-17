@@ -25,8 +25,12 @@ def process_xml_files(folder_path="."):
     invoices_data = []
 
     for file in xml_files:
-        tree = ET.parse(os.path.join(folder_path, file))
-        root = tree.getroot()
+        try:
+            tree = ET.parse(os.path.join(folder_path, file))
+            root = tree.getroot()
+        except ET.ParseError:
+            print(f"Aviso: arquivo inválido ignorado -> {file}")
+            continue
         
         infNFe = root.find('.//ns:infNFe', ns)
         if infNFe is None:
