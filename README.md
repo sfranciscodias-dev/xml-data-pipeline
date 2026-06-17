@@ -11,6 +11,7 @@ While this showcase demonstrates the core extraction, the full production versio
 * **Relational Cross-Referencing:** Identifies and links return/cancellation invoices with their original sales documents using advanced Pandas filtering and lambda functions.
 * **Multi-level Aggregation:** Generates consolidated financial reports grouped by operation type (CFOP/Natureza da Operação).
 * **High-Volume Processing:** Successfully parses, validates, and loads over **5,000 XML files** per month, outputting structured multi-sheet Excel reports.
+* Intelligent Data Deduplication: Identifies and isolates duplicate XML files not by their physical filenames, but by parsing the underlying 44-digit Access Key. This acts as a robust data-cleaning layer, ensuring data integrity before the ETL pipeline even begins.
 
 ## 🛠️ Technologies Used
 * **Python 3:** Core programming language.
