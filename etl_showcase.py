@@ -1,7 +1,6 @@
 import os
 import xml.etree.ElementTree as ET
 import pandas as pd
-from datetime import datetime
 
 # ==========================================
 # 1. SETUP & CONFIGURATION
